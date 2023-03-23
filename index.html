@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <!-- Add bootstrap -->
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Vanilla JS Weather App - Natalie Martin</title>
   </head>
   <body>
+    <div class="weather-card">
+      <!--Search Bar-->
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <div class="currentCity">
+        <!--Town Name-->
+        <h1>Reading</h1>
+        <p>21:00, Thursday 23, Scattered Showers</p>
+        <p>Humidity: 50%, Wind: 10km/h</p>
+        <!--Humdity & Wind-->
+      </div>
+      <div class="currentTemp">
+        <!--Current Temp-->
+      </div>
+      <p>15°C</p>
+      <i class="fa-regular fa-cloud-rain"></i>
+      <!--Footer-->
+    </div>
+    <small>Coded by Natalie Martin</small>
+    <script
+      src="https://kit.fontawesome.com/b835b7fd62.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="src/index.js"></script>
   </body>
 </html>
