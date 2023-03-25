@@ -4,46 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
     <title>Vanilla JS Weather App - Natalie Martin</title>
   </head>
   <body>
-    <div class="weather-card">
-      <!--Search Bar-->
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <div class="currentCity">
-        <!--Town Name-->
-        <h1>Reading</h1>
-        <p>21:00, Thursday 23, Scattered Showers</p>
-        <p>Humidity: 50%, Wind: 10km/h</p>
-        <!--Humdity & Wind-->
+    <div class="weatherWrapper">
+      <div class="weatherCard">
+        <!--Search Bar-->
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="currentWeather row align-items-center">
+          <div class="currentCity col">
+            <!--Town Name-->
+            <h1>Reading</h1>
+            <ul>
+              <li>21:00 Thursday, Scattered Showers</li>
+              <li>Humidity: 50%, Wind: 10km/h</li>
+            </ul>
+          </div>
+          <!--Current Temp-->
+          <div class="currentTemp col">
+            <p>15°C|°F</p>
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+        </div>
+
+        <!--Footer-->
       </div>
-      <div class="currentTemp">
-        <!--Current Temp-->
-      </div>
-      <p>15°C</p>
-      <i class="fa-regular fa-cloud-rain"></i>
-      <!--Footer-->
+
+      <small
+        >Coded by
+        <a href="https://github.com/natlmartin/JS-Vanilla-Weather-App"
+          >Natalie Martin</a
+        ></small
+      >
     </div>
-    <small>Coded by Natalie Martin</small>
+    <script src="src/index.js"></script>
     <script
       src="https://kit.fontawesome.com/b835b7fd62.js"
       crossorigin="anonymous"
     ></script>
-    <script src="src/index.js"></script>
   </body>
 </html>
+<!-- Improve the project including the search engine, API integration, unit conversion, wind speed, weather description, and weather icon are mandatory. The project should not include the forecast yet.
+Host your project on Netlfiy, and at the bottom of your page, link to your GitHub repository. -->

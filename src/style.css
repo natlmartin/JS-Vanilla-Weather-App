@@ -1,0 +1,39 @@
+body {
+  font-family: "Rubik", Arial, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #233142;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.weatherWrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weatherCard {
+  padding: 20px;
+  border: 1px solid #f95959;
+  border-radius: 10px;
+}
+
+.d-flex {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #f95959;
+  color: #ffffff;
+  border: none;
+}
+
+.form-control {
+  border: 1px solid #233142;
+}
