@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="src/style.css" />
     <title>Vanilla JS Weather App - Natalie Martin</title>
   </head>
@@ -36,11 +36,12 @@
         <div class="currentWeather">
           <div class="currentCity col-6">
             <!--Town Name-->
-            <h1>Reading</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>21:00 Thursday, Scattered Showers</li>
+              <li>21:00 Thursday, <span id="desc"></span></li>
               <li>
-                Humidity: <strong>50%</strong>, Wind: <strong>10km/h</strong>
+                Humidity: <strong><span id="humidity"></span>%</strong>, Wind:
+                <strong><span id="wind"></span>km/h</strong>
               </li>
             </ul>
           </div>
@@ -48,7 +49,10 @@
 
           <div class="currentTemp col-6">
             <img src="/src/scatteredShowers.png" />
-            <p>15<sup>°C|°F</sup></p>
+            <div class="currentTempDetails">
+              <p id="temperature"></p>
+              <sup>°C|°F</sup>
+            </div>
           </div>
         </div>
 
