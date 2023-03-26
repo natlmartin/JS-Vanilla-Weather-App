@@ -33,19 +33,22 @@
           />
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <div class="currentWeather row align-items-center">
-          <div class="currentCity col">
+        <div class="currentWeather">
+          <div class="currentCity col-6">
             <!--Town Name-->
             <h1>Reading</h1>
             <ul>
               <li>21:00 Thursday, Scattered Showers</li>
-              <li>Humidity: 50%, Wind: 10km/h</li>
+              <li>
+                Humidity: <strong>50%</strong>, Wind: <strong>10km/h</strong>
+              </li>
             </ul>
           </div>
           <!--Current Temp-->
-          <div class="currentTemp col">
-            <p>15°C|°F</p>
-            <i class="fa-solid fa-cloud-rain"></i>
+
+          <div class="currentTemp col-6">
+            <img src="/src/scatteredShowers.png" />
+            <p>15<sup>°C|°F</sup></p>
           </div>
         </div>
 
@@ -60,10 +63,6 @@
       >
     </div>
     <script src="src/index.js"></script>
-    <script
-      src="https://kit.fontawesome.com/b835b7fd62.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
 <!-- Improve the project including the search engine, API integration, unit conversion, wind speed, weather description, and weather icon are mandatory. The project should not include the forecast yet.
