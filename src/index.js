@@ -44,9 +44,18 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
+function search(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  console.log(cityInput.value);
+}
+
 // API call
 let apiKey = "b6c11b300o5f402a9bd26174tc9f8161";
 let city = "Reading";
 let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayTemperature);
+
+let form = document.querySelector("#form");
+form.addEventListener("submit", search);

@@ -24,14 +24,21 @@
     <div class="weatherWrapper">
       <div class="weatherCard">
         <!--Search Bar-->
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" id="form">
           <input
             class="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
+            id="city-input"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button
+            class="btn btn-outline-success"
+            type="submit"
+            id="button-submit"
+          >
+            Search
+          </button>
         </form>
         <div class="currentWeather">
           <div class="currentCity col-6">
