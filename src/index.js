@@ -25,7 +25,7 @@ function formatDate(timestamp) {
 // Get temp and weather for city and update innerHTML
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
   let descElement = document.querySelector("#desc");
@@ -42,6 +42,7 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+  celsiusTemp = response.data.temperature.current;
 }
 
 function search(city) {
@@ -58,15 +59,17 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-search("Reading");
+let celsiusTemp = null;
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+search("Reading");
