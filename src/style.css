@@ -101,3 +101,13 @@ span {
 .currentTempDetails .active:hover {
   text-decoration: none;
 }
+
+.weatherForecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #455d7a;
+}
+
+.weatherForecastMin {
+  opacity: 0.5;
+}

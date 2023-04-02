@@ -57,6 +57,7 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
+//Convert units between Fahrenheit and Celsius
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
