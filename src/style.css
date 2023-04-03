@@ -67,6 +67,7 @@ strong {
 .currentTempDetails {
   display: flex;
   align-items: baseline;
+  color: #233142;
 }
 
 div > p {
@@ -92,15 +93,15 @@ span {
   text-transform: capitalize;
 }
 
-.currentTempDetails .active {
-  color: #233142;
+/* .currentTempDetails .active {
+
   cursor: default;
   text-decoration: none;
-}
+} */
 
-.currentTempDetails .active:hover {
+/* .currentTempDetails .active:hover {
   text-decoration: none;
-}
+} */
 
 .weatherForecast {
   margin-top: 20px;
